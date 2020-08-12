@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(fetchRequest: ToDoItem.getAllToDoItem()) var toDoItem : FetchedResults<ToDoItem>
+    @FetchRequest(fetchRequest: ToDoItem.getAllToDoItem()) var toDoItems : FetchedResults<ToDoItem>
     
     @State private var newToDoItem = ""
     var body: some View {
@@ -42,6 +42,14 @@ struct ContentView: View {
                         }
                     }
                 }.font(.headline)
+                Section(header: Text("Todo Items")) {
+                    
+                    Text("bla bla bla")
+                    /*ForEach(self.toDoItems){todoItem in
+                        
+                        
+                    } */
+                }
             }
             .navigationBarTitle(Text("My list"))
             .navigationBarItems(trailing: EditButton())

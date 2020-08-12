@@ -15,6 +15,7 @@
 		9646418124E3C5E1005D215C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9646418024E3C5E1005D215C /* Preview Assets.xcassets */; };
 		9646418424E3C5E1005D215C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9646418224E3C5E1005D215C /* LaunchScreen.storyboard */; };
 		9646418C24E3C7B8005D215C /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646418B24E3C7B8005D215C /* ToDoItem.swift */; };
+		9646418E24E3D4A2005D215C /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646418D24E3D4A2005D215C /* ToDoItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9646418324E3C5E1005D215C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9646418524E3C5E1005D215C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9646418B24E3C7B8005D215C /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		9646418D24E3D4A2005D215C /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				9646417424E3C5DF005D215C /* AppDelegate.swift */,
 				9646417624E3C5DF005D215C /* SceneDelegate.swift */,
 				9646417B24E3C5DF005D215C /* ContentView.swift */,
+				9646418D24E3D4A2005D215C /* ToDoItemView.swift */,
 				9646418B24E3C7B8005D215C /* ToDoItem.swift */,
 				9646417D24E3C5E1005D215C /* Assets.xcassets */,
 				9646418224E3C5E1005D215C /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9646417A24E3C5DF005D215C /* coreDataTodoApp.xcdatamodeld in Sources */,
+				9646418E24E3D4A2005D215C /* ToDoItemView.swift in Sources */,
 				9646417524E3C5DF005D215C /* AppDelegate.swift in Sources */,
 				9646418C24E3C7B8005D215C /* ToDoItem.swift in Sources */,
 				9646417C24E3C5DF005D215C /* ContentView.swift in Sources */,
