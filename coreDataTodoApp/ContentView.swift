@@ -47,6 +47,16 @@ struct ContentView: View {
                     ForEach(self.toDoItems){todoItem in
                         
                         ToDoItemView(title: todoItem.title!, createdAt: "\(todoItem.createdAt!)")
+                    }.onDelete { (indexset) in
+                        
+                        let deleteItem = self.toDoItems[indexset.first!]
+                        self.managedObjectContext.delete(deleteItem)
+                        
+                        do{
+                            try self.managedObjectContext.save()
+                        }catch{
+                            print(error)
+                        }
                     }
                 }
             }
