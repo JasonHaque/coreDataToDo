@@ -23,7 +23,18 @@ struct ContentView: View {
                     HStack{
                         TextField("New Item", text: self.$newToDoItem)
                         Button(action: {
+                            let todoItem = ToDoItem(context: self.managedObjectContext)
+                            todoItem.title = self.newToDoItem
+                            todoItem.createdAt = Date()
                             
+                            do{
+                                try self.managedObjectContext.save()
+                                print("saved")
+                            }catch{
+                                print(error)
+                            }
+                            
+                            self.newToDoItem = ""
                         }) {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.green)
@@ -32,9 +43,10 @@ struct ContentView: View {
                     }
                 }.font(.headline)
             }
+            .navigationBarTitle(Text("My list"))
+            .navigationBarItems(trailing: EditButton())
         }
-    .navigationBarTitle(Text("My list"))
-    .navigationBarItems(trailing: EditButton())
+    
     }
 }
 
