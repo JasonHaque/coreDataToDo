@@ -15,7 +15,26 @@ struct ContentView: View {
     
     @State private var newToDoItem = ""
     var body: some View {
-        Text("Hello, World!")
+        
+        NavigationView{
+            List{
+                Section(header: Text("What's Next?")) {
+                    
+                    HStack{
+                        TextField("New Item", text: self.$newToDoItem)
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.green)
+                                .imageScale(.large)
+                        }
+                    }
+                }.font(.headline)
+            }
+        }
+    .navigationBarTitle(Text("My list"))
+    .navigationBarItems(trailing: EditButton())
     }
 }
 
