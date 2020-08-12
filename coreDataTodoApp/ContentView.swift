@@ -44,11 +44,10 @@ struct ContentView: View {
                 }.font(.headline)
                 Section(header: Text("Todo Items")) {
                     
-                    Text("bla bla bla")
-                    /*ForEach(self.toDoItems){todoItem in
+                    ForEach(self.toDoItems){todoItem in
                         
-                        
-                    } */
+                        ToDoItemView(title: todoItem.title!, createdAt: "\(todoItem.createdAt!)")
+                    }
                 }
             }
             .navigationBarTitle(Text("My list"))
